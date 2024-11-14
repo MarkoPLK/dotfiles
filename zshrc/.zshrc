@@ -80,7 +80,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(
+    git 
+    zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,5 +119,5 @@ alias p='sudo pacman'
 alias flameshot='flameshot gui'
 alias vim='nvim'
 alias svim='sudo nvim'
-alias pbcopy="xclip -selection -clipboard"
-alias pbpaste="xclip -o -selection -clipboard"
+alias xcopy="xclip -in -selection clipboard"
+alias xpaste="xclip -o -selection clipboard"
