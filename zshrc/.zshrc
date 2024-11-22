@@ -20,6 +20,11 @@ export TEXMFVAR=~/.texlive/texmf-var
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+# Disabling underlying
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES+=(path none path_prefix none)
+ZSH_HIGHLIGHT_DIRS_BLACKLIST=(/*/)
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -121,3 +126,4 @@ alias vim='nvim'
 alias svim='sudo nvim'
 alias xcopy="xclip -in -selection clipboard"
 alias xpaste="xclip -o -selection clipboard"
+alias z="zathura"
