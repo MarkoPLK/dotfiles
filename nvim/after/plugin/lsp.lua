@@ -26,11 +26,19 @@ lsp_zero.extend_lspconfig({
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	handlers = {
-		function(server_name)
-			require('lspconfig')[server_name].setup({})
-		end,
-	},
+    handlers = {
+        function(server_name)
+            if server_name == "clangd" then
+                require('lspconfig')[server_name].setup({
+                    on_attach = function (client, bufnr)
+                        vim.diagnostic.disable(bufnr)
+                    end,
+                })
+            else
+                require('lspconfig')[server_name].setup({})
+            end
+        end,
+    },
 })
 
 ---
