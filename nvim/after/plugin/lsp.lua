@@ -28,7 +28,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     handlers = {
         function(server_name)
-            if server_name == "clangd" then
+            if server_name == "clangd" or server_name == "pylsp" then
                 require('lspconfig')[server_name].setup({
                     on_attach = function (client, bufnr)
                         vim.diagnostic.disable(bufnr)

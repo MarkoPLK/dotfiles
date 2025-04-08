@@ -23,10 +23,10 @@ vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Copiar en el clipboard del sistema
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -53,6 +53,9 @@ vim.keymap.set(
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/markoplk/packer.lua<CR>");
 vim.keymap.set("n", "<leader>vpr", "<cmd>e ~/.config/nvim/lua/markoplk/remap.lua<CR>");
+
+-- Turn of highlighting
+vim.keymap.set("n", "<Esc><Esc>", vim.cmd.nohlsearch)
 
 
 -- Diagnostics mapping

@@ -39,4 +39,3 @@ onedark.setup  {
     },
 }
 -- onedark.load()
-

@@ -1,8 +1,6 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
-
 # Custom scripts
 export PATH="$PATH:$HOME/.local/bin/statusbar"
 export PATH="$PATH:$HOME/.local/bin"
@@ -52,6 +50,7 @@ else
 fi
 
 # Aliases
+alias nvim="/opt/nvim/current"
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias p='sudo pacman'

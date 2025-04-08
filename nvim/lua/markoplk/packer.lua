@@ -27,10 +27,7 @@ return require('packer').startup(function(use)
   -- Kanagawa theme
   use "rebelot/kanagawa.nvim"
 
-  use 'navarasu/onedark.nvim'
-
-  use  'rose-pine/neovim'
-
+  -- use 'navarasu/onedark.nvim'
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
@@ -42,8 +39,9 @@ return require('packer').startup(function(use)
   use({'neovim/nvim-lspconfig'})
   use({'hrsh7th/nvim-cmp'})
   use({'hrsh7th/cmp-nvim-lsp'})
-  use{'williamboman/mason-lspconfig.nvim'}
-  use {"williamboman/mason.nvim"}
+  use({'williamboman/mason-lspconfig.nvim'})
+  use{"williamboman/mason.nvim"}
+
   use({
       "kylechui/nvim-surround",
       tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -56,11 +54,6 @@ return require('packer').startup(function(use)
   use({
       "lervag/vimtex",
       lazy = false,     -- we don't want to lazy load VimTeX
-      -- tag = "v2.15", -- uncomment to pin to a specific release
-      init = function()
-          -- VimTeX configuration goes here, e.g.
-          vim.g.vimtex_view_method = "zathura"
-      end
   })
 
   use{'tpope/vim-fugitive'}
