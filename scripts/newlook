@@ -1,0 +1,10 @@
+#!/bin/sh
+
+wall=$(find ~/Imágenes/wallpapers -type f -name "*.jpg" -o -name "*.png" -o -name "*.jfif" | shuf -n 1)
+
+# background image
+xwallpaper --zoom $wall
+
+# generate color scheme
+#wal -c
+#wal -i $wall

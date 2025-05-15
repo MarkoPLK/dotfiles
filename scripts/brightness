@@ -1,0 +1,40 @@
+#!/bin/bash
+
+bright=$(cat /sys/class/backlight/nvidia_0/brightness)
+max=$(cat /sys/class/backlight/nvidia_0/max_brightness)
+
+
+IncreaseBrightness() 
+{
+
+    [[ $bright -eq 100 ]] && exit 1;
+    new=$(echo $bright+$inc | bc)
+    if [[ $new -lt $max ]]; then
+        $(echo $new > /sys/class/backlight/nvidia_0/brightness)
+    else
+        $(echo 100 > /sys/class/backlight/nvidia_0/brightness)
+    fi
+}
+
+DecreaseBrightness() 
+{
+    [[ $bright -eq 0 ]] && exit 1;
+    new=$(echo $bright-$dec | bc)
+    if [[ $new -gt 0 ]]; then
+        $(echo $new > /sys/class/backlight/nvidia_0/brightness)
+    else 
+        $(echo 0 > /sys/class/backlight/nvidia_0/brightness)
+    fi
+}
+
+while getopts "i:d:" flag; do
+    case $flag in
+        i)
+            inc=$OPTARG
+            IncreaseBrightness;;
+        d) 
+            dec=$OPTARG
+            DecreaseBrightness;;
+    esac
+done
+

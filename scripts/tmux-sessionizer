@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+work_dirs=`find ~/personal ~/personal/CTF/ ~/personal/hacking/ ~/personal/kernel/ ~/personal/programming/ -maxdepth 1 -mindepth 1 -type d`
+class_dirs=`find ~/MUCC -mindepth 1 -maxdepth 4 -iname "*practica*" -type d -o -iname "*lab*" -type d -o -iname "*trabajo*" -type d`
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=`printf "$work_dirs\n$class_dirs" | fzf`
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+selected_name=`basename $selected | tr . _`
+tmux_running=`tmux ls`
+
+if [[ -z $tmux_running ]] ;then 
+    tmux new-session -s $selected_name -c $selected
+    exit 0
+fi
+
+if ! tmux has-session -t=$selected_name 2> /dev/null; then 
+    tmux new-session -ds $selected_name -c $selected
+fi
+
+if [[ -z $TMUX ]]; then
+    tmux attach -t $selected_name
+else
+    tmux switch-client -t $selected_name
+fi
