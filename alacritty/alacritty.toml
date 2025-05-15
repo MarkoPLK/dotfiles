@@ -6,30 +6,31 @@ padding.x = 4
 padding.y = 4
 dynamic_padding = true
 
-decorations = "None"
+decorations = "Full"
 decorations_theme_variant = "Dark" # "Light"
+
 
 [font]
 size = 12
-
 offset.x = 0
 offset.y = 0
 
+[font.normal]
+family = "JetBrainsMonoNL NF"
+style = "Regular"
+
 [font.bold]
-family = "RobotoMono Nerd Font"
+family = "JetBrainsMonoNL NF"
 style = "Bold"
 
 [font.bold_italic]
-family = "RobotoMono Nerd Font"
+family = "JetBrainsMonoNL NF"
 style = "Bold Italic"
 
 [font.italic]
-family = "RobotoMono Nerd Font"
+family = "JetBrainsMonoNL NF"
 style = "Italic"
 
-[font.normal]
-family = "RobotoMono Nerd Font"
-style = "Regular"
 
 # normal.family = "JetBrainsMono Nerd Font Mono"
 # bold.family = "JetBrainsMono Nerd Font Mono"

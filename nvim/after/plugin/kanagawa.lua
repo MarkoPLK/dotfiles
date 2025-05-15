@@ -1,4 +1,4 @@
--- Default options:
+﻿-- Default options:
 require('kanagawa').setup({
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
@@ -12,9 +12,11 @@ require('kanagawa').setup({
     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
     colors = {                   -- add/modify theme and palette colors
         palette = {
-            sumiInk3 = "#1d1f21",
-            waveBlue1 = "#363646",
-            waveBlue2 = "#54546D",
+            -- sumiInk3 = "#111313",
+            sumiInk3 = "#000000",
+            -- sumiInk3 = "#1d1f21",
+            -- waveBlue1 = "#363646",
+            -- waveBlue2 = "#54546D",
         },
         theme = { 
             wave = {}, 
@@ -43,12 +45,11 @@ require('kanagawa').setup({
         }
     end,
     theme = "wave",              -- Load "wave" theme when 'background' option is not set
-    background = ""
-    -- {                            -- map the value of 'background' option to a theme
-    --     dark = "dragon",           -- try "dragon" !
-    --     light = "lotus",
-    --     normal = "wave",
-    -- }
+    background =
+    {                            -- map the value of 'background' option to a theme
+        dark = "wave",           -- try "dragon" !
+        light = "lotus",
+    }
 })
 
 -- setup must be called before loading

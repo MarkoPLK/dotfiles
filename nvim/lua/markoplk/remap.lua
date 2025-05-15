@@ -53,6 +53,7 @@ vim.keymap.set(
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/markoplk/packer.lua<CR>");
 vim.keymap.set("n", "<leader>vpr", "<cmd>e ~/.config/nvim/lua/markoplk/remap.lua<CR>");
+vim.keymap.set("n", "<leader>vpa", "<cmd>e ~/.config/nvim/after/plugin/<CR>");
 
 -- Turn of highlighting
 vim.keymap.set("n", "<Esc><Esc>", vim.cmd.nohlsearch)
