@@ -215,3 +215,6 @@ bindsym $mod+Tab workspace back_and_forth
 
 # Move focus to Brave when open
 # for_window [class="Brave-browser"] focus
+
+# Assign window classes to workspaces
+assign [class="obsidian"] 3

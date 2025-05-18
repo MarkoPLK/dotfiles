@@ -1,7 +1,7 @@
 #!/bin/bash
 
 languages=$(echo "golang python lua c c++ bash js" | tr ' ' '\n')
-core_utils=$(echo "stow git tar zip grep sed tr awk" | tr ' ' '\n')
+core_utils=$(echo "find stow git tar zip grep sed tr awk" | tr ' ' '\n')
 
 selected=`printf "$languages\n$core_utils" | fzf`
 
@@ -20,4 +20,4 @@ else
 fi
 
 echo $curl
-tmux neww bash -c "curl -s $curl | less"
+tmux neww bash -c "curl -s $curl | less -R"

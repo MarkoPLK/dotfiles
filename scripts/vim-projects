@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+nvim_tmux=`tmux list-windows -f "#{==:#{window_name},nvim}" -F \#S:\#I | head -n1`
+
+selected=`find ~/personal ~/dotfiles ~/MUCC -mindepth 1 -maxdepth 4 \( ! -name "*.pdf" -and ! -name "*.png" -and ! -name "*.jpg" -and ! -name "*.opf" -and ! -name "*.epub" -and ! -path "*.git/*" -and ! -name "*.doc*"  -and ! -name "*.gz" -and ! -name "*.zip" \) -type f 2>/dev/null | fzf`
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+tmux send-keys -t $nvim_tmux ":e $selected" C-m

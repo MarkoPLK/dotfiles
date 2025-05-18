@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight yanked text',
   pattern = '*',
   callback = function()
-    vim.highlight.on_yank({
+    vim.hl.on_yank({
       higroup = 'IncSearch',  -- highlight group (e.g., 'Visual', 'IncSearch')
       timeout = 300,         -- timeout in ms before highlight is cleared
     })
