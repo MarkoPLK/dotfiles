@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
+  ["melange-nvim"] = {
+    loaded = true,
+    path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/melange-nvim",
+    url = "https://github.com/savq/melange-nvim"
+  },
   ["mini.nvim"] = {
     loaded = true,
     path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/mini.nvim",

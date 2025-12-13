@@ -1,9 +1,7 @@
-local lspconfig = require('lspconfig')
+vim.lsp.enable('lua_ls')
 
-lspconfig.lua_ls.setup {}
-
-lspconfig.clangd.setup {}
-lspconfig.pyright.setup {}
+vim.lsp.enable('clangd')
+vim.lsp.enable('pyright')
 
 -- Diagnostics mapping
 vim.keymap.set('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })

@@ -15,19 +15,14 @@ return require('packer').startup(function(use)
 
   use { 'echasnovski/mini.nvim', version = '*' }
 
-  -- use ({
-  --  'rose-pine/nvim',
-  --  as = 'rose-pine',
-  --  -- config = function()
-  --  --  vim.cmd('colorscheme rose-pine')
-  --  -- end
-  --
-  -- })
 
   -- Kanagawa theme
   use "rebelot/kanagawa.nvim"
 
-  -- use 'navarasu/onedark.nvim'
+  -- use { "catppuccin/nvim", as = "catppuccin" }
+
+  use { "savq/melange-nvim" }
+
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
@@ -37,16 +32,7 @@ return require('packer').startup(function(use)
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
 
-    use({'neovim/nvim-lspconfig'})
-  -- use({'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'})
-  -- use({'hrsh7th/nvim-cmp'})
-  -- use({'hrsh7th/cmp-nvim-lsp'})
-  -- use({'williamboman/mason-lspconfig.nvim'})
-    -- use({"williamboman/mason.nvim",
-    --     config = function()
-    --         require('mason').setup()
-    --     end
-    -- })
+  use({'neovim/nvim-lspconfig'})
 
   use({
       "kylechui/nvim-surround",

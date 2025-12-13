@@ -7,19 +7,13 @@ require('kanagawa').setup({
     keywordStyle = { italic = true},
     statementStyle = { bold = true },
     typeStyle = {},
-    transparent = false,         -- do not set background color
+    transparent = true,         -- do not set background color
     dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
     colors = {                   -- add/modify theme and palette colors
-        palette = {
-            -- sumiInk3 = "#111313",
-            sumiInk3 = "#000000",
-            -- sumiInk3 = "#1d1f21",
-            -- waveBlue1 = "#363646",
-            -- waveBlue2 = "#54546D",
-        },
-        theme = { 
-            wave = {}, 
+        palette = {},
+        theme = {
+            wave = {},
             lotus = {},
             dragon = {},
             all = {
@@ -29,7 +23,7 @@ require('kanagawa').setup({
                 float = {
                     bg = "none"
                 }
-            } 
+            }
         },
     },
     overrides = function(colors) -- add/modify highlights
@@ -53,4 +47,4 @@ require('kanagawa').setup({
 })
 
 -- setup must be called before loading
-vim.cmd("colorscheme kanagawa")
+-- vim.cmd.colorscheme("kanagawa-dragon")

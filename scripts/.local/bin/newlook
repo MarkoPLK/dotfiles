@@ -3,7 +3,8 @@
 wall=$(find ~/Imágenes/wallpapers -type f -name "*.jpg" -o -name "*.png" -o -name "*.jfif" | shuf -n 1)
 
 # background image
-xwallpaper --zoom $wall
+# xwallpaper --zoom $wall
+swaybg -i "$wall" -m fill
 
 # generate color scheme
 #wal -c

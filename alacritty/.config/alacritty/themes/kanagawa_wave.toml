@@ -3,7 +3,8 @@
 
 [colors.primary]
 # background = '#1d1f21'
-background = '#000000'
+# background = '#000000'
+background = '#111313'
 foreground = '#dcd7ba'
 
 [colors.normal]

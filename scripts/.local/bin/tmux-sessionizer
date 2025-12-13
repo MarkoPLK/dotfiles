@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-work_dirs=`find ~/personal ~/personal/CTF/ ~/personal/hacking/ ~/personal/kernel/ ~/personal/programming/ -maxdepth 1 -mindepth 1 -type d``printf "\n$HOME/dotfiles"`
-class_dirs=`find ~/MUCC -mindepth 1 -maxdepth 4 -iname "*practica*" -type d -o -iname "*lab*" -type d -o -iname "*trabajo*" -type d`
+work_dirs=`find ~/personal ~/personal/CTF/ ~/personal/instrumentacion/ ~/personal/instrumentacion/clients/ ~/personal/hacking/ ~/personal/kernel/ ~/personal/programming/ -maxdepth 2 -mindepth 1 -type d``printf "\n$HOME/dotfiles"`
+class_dirs=`find ~/MUCC -maxdepth 4 -type d`
 
 if [[ $# -eq 1 ]]; then
     selected=$1

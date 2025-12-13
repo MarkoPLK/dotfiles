@@ -2,8 +2,8 @@
 
 opacity = 1
 
-padding.x = 4
-padding.y = 4
+padding.x = 2
+padding.y = 2
 dynamic_padding = true
 
 decorations = "Full"
@@ -11,33 +11,17 @@ decorations_theme_variant = "Dark" # "Light"
 
 
 [font]
-size = 12
+size = 16
 offset.x = 0
 offset.y = 0
 
-[font.normal]
-family = "JetBrainsMonoNL NF"
-style = "Regular"
+normal.family = "JetBrainsMono NF"
+bold.family = "JetBrainsMono NF" 
+italic.family = "JetBrainsMono NF"  
+bold_italic.family = "JetBrainsMono NF"
 
-[font.bold]
-family = "JetBrainsMonoNL NF"
-style = "Bold"
-
-[font.bold_italic]
-family = "JetBrainsMonoNL NF"
-style = "Bold Italic"
-
-[font.italic]
-family = "JetBrainsMonoNL NF"
-style = "Italic"
-
-
-# normal.family = "JetBrainsMono Nerd Font Mono"
-# bold.family = "JetBrainsMono Nerd Font Mono"
-# italic.family = "JetBrainsMono Nerd Font Mono"
-# bold_italic.family = "JetBrainsMono Nerd Font Mono"
-
-
+[colors.primary]
+background = '#1c1c1c' # retrobox bg
 
 [general]
 # $HOME/.config/alacritty/alacritty.toml
@@ -62,7 +46,7 @@ style = "Italic"
 
 import = [
     # "~/.config/alacritty/themes/kanagawa_dragon.toml"
-    "~/.config/alacritty/themes/kanagawa_wave.toml"
+    # "~/.config/alacritty/themes/kanagawa_wave.toml"
 ]
 
 # Tip: for inspiration, look for values in the source code files of your favorite VS Code themes, and use the color picker in
