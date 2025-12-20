@@ -14,19 +14,11 @@ return require('packer').startup(function(use)
   }
 
   use { 'echasnovski/mini.nvim', version = '*' }
-
-
-  -- Kanagawa theme
-  use "rebelot/kanagawa.nvim"
-
-  -- use { "catppuccin/nvim", as = "catppuccin" }
-
-  use { "savq/melange-nvim" }
-
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
   }
+
   use('nvim-treesitter/nvim-treesitter-context')
 
   use('theprimeagen/harpoon')
@@ -49,4 +41,16 @@ return require('packer').startup(function(use)
   })
 
   use{'tpope/vim-fugitive'}
+
+  -- Kanagawa theme
+  use "rebelot/kanagawa.nvim"
+  -- Attractive colors
+  use "jaredgorski/SpaceCamp"
+  -- Pure black and white
+  use "huyvohcmc/atlas.vim"
+  -- Monochrome with light dark blue strings
+  use "fxn/vim-monochrome"
+  use "widatama/vim-phoenix"
+  use "ryanpcmcquen/true-monochrome_vim"
+
 end)

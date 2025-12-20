@@ -74,6 +74,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  SpaceCamp = {
+    loaded = true,
+    path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/SpaceCamp",
+    url = "https://github.com/jaredgorski/SpaceCamp"
+  },
+  ["atlas.vim"] = {
+    loaded = true,
+    path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/atlas.vim",
+    url = "https://github.com/huyvohcmc/atlas.vim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -83,11 +93,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
-  },
-  ["melange-nvim"] = {
-    loaded = true,
-    path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/melange-nvim",
-    url = "https://github.com/savq/melange-nvim"
   },
   ["mini.nvim"] = {
     loaded = true,
@@ -130,6 +135,11 @@ _G.packer_plugins = {
     path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["true-monochrome_vim"] = {
+    loaded = true,
+    path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/true-monochrome_vim",
+    url = "https://github.com/ryanpcmcquen/true-monochrome_vim"
+  },
   undotree = {
     loaded = true,
     path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/undotree",
@@ -139,6 +149,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-monochrome"] = {
+    loaded = true,
+    path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/vim-monochrome",
+    url = "https://github.com/fxn/vim-monochrome"
+  },
+  ["vim-phoenix"] = {
+    loaded = true,
+    path = "/home/markoplk/.local/share/nvim/site/pack/packer/start/vim-phoenix",
+    url = "https://github.com/widatama/vim-phoenix"
   },
   vimtex = {
     loaded = true,
