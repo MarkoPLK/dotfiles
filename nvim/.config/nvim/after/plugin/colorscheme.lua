@@ -11,5 +11,6 @@ local group = vim.api.nvim_create_augroup("ColorschemeOverride", { clear = true 
 --
 -- })
 
-vim.cmd.colorscheme("dragonGreen")
+-- vim.cmd.colorscheme("dragonGreen")
+vim.cmd.colorscheme("zenesque")
 -- vim.cmd("PhoenixGreen")
