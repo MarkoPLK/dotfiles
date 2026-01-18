@@ -18,13 +18,13 @@
     "modules-right": [
         // "mpd",
         "idle_inhibitor",
+        "backlight",
         "pulseaudio",
         "network",
         // "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
-        "backlight",
         // "keyboard-state",
         // "sway/language",
         "battery",
@@ -133,7 +133,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{percent}% {icon} ",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -168,7 +168,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{essid} ({signalStrength}%)  ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -177,7 +177,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",

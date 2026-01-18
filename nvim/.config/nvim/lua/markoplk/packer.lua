@@ -41,16 +41,34 @@ return require('packer').startup(function(use)
   })
 
   use{'tpope/vim-fugitive'}
+  use "airblade/vim-gitgutter"
+
+  use "rktjmp/lush.nvim"
 
   -- Kanagawa theme
   use "rebelot/kanagawa.nvim"
-  -- Attractive colors
-  use "jaredgorski/SpaceCamp"
-  -- Pure black and white
-  use "huyvohcmc/atlas.vim"
-  -- Monochrome with light dark blue strings
-  use "fxn/vim-monochrome"
-  use "widatama/vim-phoenix"
-  use "ryanpcmcquen/true-monochrome_vim"
+
+  use { "mcchrish/zenbones.nvim",
+        dependencies = "rktjmp/lush.nvim",
+        lazy = false,
+        priority = 1000}
+
+  -- zazen vim color scheme (a personalized version of zenesque) (really good gray scale and background change for lit)
+  use "zaki/zazen"
+
+  -- A minimal vim colorscheme, inspired by the work of Dieter Rams. (too white)
+  use "stefanvanburen/rams.vim"
+
+  -- A dark monochrome grey colorscheme for vim with a simple accent color.
+  use "aditya-azad/candle-grey"
+
+  -- Adds red words
+  use "ntk148v/komau.vim"
+
+  -- Inspired by SpaceCamp
+  use "pbrisbin/vim-colors-off"
+  --
+  -- use "jaredgorski/fogbell.vim"
+  -- use "jaredgorski/Mies.vim"
 
 end)

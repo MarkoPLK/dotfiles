@@ -10,7 +10,7 @@ export TEXMFVAR=~/.texlive/texmf-var
 #
 export DYNAMORIO_HOME="$HOME/personal/instrumentacion/DynamoRIO-Linux-11.3.0-1"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="minimal"
 
 # Disabling underlying
 typeset -A ZSH_HIGHLIGHT_STYLES
@@ -32,7 +32,8 @@ source $ZSH/oh-my-zsh.sh
 source /usr/bin/virtualenvwrapper.sh
 
 # Custom prompt
-PROMPT="%B%F{#C34043}%n%f%F{#C8C093}@%f%F{green}%m%f%b: %B%F{cyan}%c%f%b %(?:%F{green}➜%f :%F{red}➜%f )\$(git_prompt_info)"
+# PROMPT="%B%F{#C34043}%n%f%F{#C8C093}@%f%F{green}%m%f%b: %B%F{cyan}%c%f%b %(?:%F{green}➜%f :%F{red}➜%f )\$(git_prompt_info)"
+PROMPT="%2~ \$(git_prompt_info)»%b "
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

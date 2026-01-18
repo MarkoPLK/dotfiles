@@ -47,6 +47,7 @@ background = '#1c1c1c' # retrobox bg
 import = [
     # "~/.config/alacritty/themes/kanagawa_dragon.toml"
     # "~/.config/alacritty/themes/kanagawa_wave.toml"
+    "~/.config/alacritty/themes/zenbones/zenwritten_dark.toml"
 ]
 
 # Tip: for inspiration, look for values in the source code files of your favorite VS Code themes, and use the color picker in
