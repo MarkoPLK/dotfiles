@@ -3,13 +3,12 @@ vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.api.nvim_set_option("clipboard","unnamed")
+vim.opt.clipboard = "unnamed"
 
-vim.opt.tabstop = 8
-vim.opt.softtabstop = 8
-vim.opt.shiftwidth = 8
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-
 vim.opt.smartindent = true
 
 vim.opt.wrap = true
@@ -61,7 +60,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
         group = format_xxd_group,
         pattern = "*.bin",
         callback = function()
-                if vim.opt.binary:get() then
+                if vim.opt.binary then
                         vim.cmd("silent %%!xxd -c 32")
                         vim.bo.filetype = "xxd"
                         vim.cmd("redraw")
@@ -73,7 +72,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
         group = format_xxd_group,
         pattern = "*.bin",
         callback = function()
-                if vim.opt.binary:get() then
+                if vim.opt.binary then
                         vim.b._bin_view = vim.fn.winsaveview()
                         vim.cmd("silent %%!xxd -r -c 32")
                 end
@@ -84,7 +83,7 @@ vim.api.nvim_create_autocmd('BufWritePost', {
         group = format_xxd_group,
         pattern = "*.bin",
         callback = function()
-                if vim.opt.binary:get() then
+                if vim.opt.binary then
                         vim.cmd("silent %%!xxd -c 32")
                         vim.opt.modified = false
                         if vim.b._bin_view then
@@ -126,3 +125,5 @@ vim.api.nvim_create_autocmd('BufWritePost', {
     group = "LaTeXCompile",
 })
 -- END VimTex
+
+vim.opt.spelllang = 'es,en'

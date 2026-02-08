@@ -1,5 +1,13 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+-- Explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+vim.keymap.del("n", "gO")
+
+-- Fast find keybind
+vim.keymap.set("n", "-", "/");
 
 -- Mover selección
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -51,10 +59,9 @@ vim.keymap.set(
     "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/markoplk/packer.lua<CR>");
-vim.keymap.set("n", "<leader>vpr", "<cmd>e ~/.config/nvim/lua/markoplk/remap.lua<CR>");
-vim.keymap.set("n", "<leader>vpa", "<cmd>e ~/.config/nvim/after/plugin/<CR>");
-vim.keymap.set("n", "<leader>vps", "<cmd>e ~/.config/nvim/lua/markoplk/set.lua<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/plugins/<CR>");
+vim.keymap.set("n", "<leader>vpr", "<cmd>e ~/.config/nvim/lua/config/remap.lua<CR>");
+vim.keymap.set("n", "<leader>vps", "<cmd>e ~/.config/nvim/lua/config/set.lua<CR>");
 
 -- Turn of highlighting
 vim.keymap.set("n", "<Esc><Esc>", vim.cmd.nohlsearch)
@@ -81,3 +88,8 @@ vim.keymap.set('n', '<Up>', '<Nop>')
 vim.keymap.set('n', '<Left>', '<Nop>')
 vim.keymap.set('n', '<Down>', '<Nop>')
 vim.keymap.set('n', '<Right>', '<Nop>')
+
+-- Diagnostics
+vim.keymap.set('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>d[', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>d]', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
