@@ -18,6 +18,4 @@ if vim.bo.filetype == "c" then
         ]])
 end
 
-vim.cmd([[
-        iabbr <buffer> <silent> if if ()<Left><C-R>=Eatchar('\s')<CR>
-]])
+vim.keymap.set("n", "gh", "<cmd>:LspClangdSwitchSourceHeader<CR>", { desc = "Switch between source/header", buffer = true })
