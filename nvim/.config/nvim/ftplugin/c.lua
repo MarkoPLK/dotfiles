@@ -11,7 +11,7 @@ endfunc
 ]])
 
 if vim.bo.filetype == "c" then
-        vim.opt_local.makeprg = "gcc -g -o %:t:r %"
+        vim.opt_local.makeprg = "gcc -g -o %:p:r %"
 
         vim.cmd([[
                 iabbr <buffer> FF for(i = 0; i <; i++)<Left><Left><Left><Left><Left><Left>
