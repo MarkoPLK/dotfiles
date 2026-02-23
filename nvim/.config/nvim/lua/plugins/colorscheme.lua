@@ -48,8 +48,31 @@ return {
             background = {           -- map the value of 'background' option to a theme
                 dark = "dragon",     -- try "dragon" !
                 light = "lotus",
-            }
-        }
+            },
+            overrides = function(colors)
+                local theme = colors.theme
+                return {
+                    -- Popup menu --
+                    Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
+                    PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+                    PmenuSbar = { bg = theme.ui.bg_m1 },
+                    PmenuThumb = { bg = theme.ui.bg_p2 },
+
+                    PmenuKind = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
+                    PmenuKindSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+
+                    PmenuExtra = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
+                    PmenuExtraSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+
+                    -- Cursor line --
+                    CursorLine = { fg = "NONE", bg = theme.ui.bg_p1 },
+                }
+            end,
+        },
+        config = function(_, opts)
+            require("kanagawa").setup(opts)
+            vim.cmd([[colorscheme kanagawa-dragon]])
+        end,
     },
 
 
