@@ -2,11 +2,13 @@
 
 work_dirs=`find ~/personal ~/personal/CTF/ ~/personal/instrumentacion/ ~/personal/instrumentacion/clients/ ~/personal/hacking/ ~/personal/kernel/ ~/personal/programming/ -maxdepth 2 -mindepth 1 -type d``printf "\n$HOME/dotfiles"`
 class_dirs=`find ~/MUCC -maxdepth 4 -type d`
+notes_dir=$HOME/notas
+dev_dir=`find $HOME/dev -type d`
 
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=`printf "$work_dirs\n$class_dirs" | fzf`
+    selected=`printf "$work_dirs\n$class_dirs\n$notes_dir\n$dev_dir" | fzf`
 fi
 
 if [[ -z $selected ]]; then
