@@ -39,3 +39,6 @@ fo:remove("o")    -- no insertar prefijo de comentario al usar o/O
 -- ================================
 vim.cmd("syntax on")                   -- resaltar cabeceras, listas, enlaces
 
+vim.opt_local.conceallevel = 2
+vim.opt_local.concealcursor = "nc"
+vim.opt_local.colorcolumn = "0"
