@@ -4,6 +4,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom scripts
 export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/scripts"
 
+export PATH="$PATH:$HOME/.cargo/bin"
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export TEXMFVAR=~/.texlive/texmf-var
 # export MANPATH="/usr/local/man:$MANPATH"
