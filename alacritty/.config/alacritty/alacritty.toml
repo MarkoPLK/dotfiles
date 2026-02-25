@@ -2,8 +2,8 @@
 
 opacity = 1
 
-padding.x = 2
-padding.y = 2
+padding.x = 0
+padding.y = 0
 dynamic_padding = true
 
 decorations = "Full"
@@ -11,7 +11,7 @@ decorations_theme_variant = "Dark" # "Light"
 
 
 [font]
-size = 16
+size = 18
 offset.x = 0
 offset.y = 0
 
@@ -21,7 +21,9 @@ italic.family = "JetBrainsMono NF"
 bold_italic.family = "JetBrainsMono NF"
 
 [colors.primary]
-background = '#1c1c1c' # retrobox bg
+# background = '#1c1c1c' # retrobox bg
+# background = '#0d0d0d' # retrobox bg
+background = '#181616' # kanagawa dragon bg
 
 [general]
 # $HOME/.config/alacritty/alacritty.toml
@@ -47,7 +49,6 @@ background = '#1c1c1c' # retrobox bg
 import = [
     # "~/.config/alacritty/themes/kanagawa_dragon.toml"
     # "~/.config/alacritty/themes/kanagawa_wave.toml"
-    "~/.config/alacritty/themes/zenbones/zenwritten_dark.toml"
 ]
 
 # Tip: for inspiration, look for values in the source code files of your favorite VS Code themes, and use the color picker in
