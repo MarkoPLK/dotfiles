@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = ","
 
 -- Explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -67,7 +67,7 @@ vim.keymap.set("n", "<leader>vps", "<cmd>e ~/.config/nvim/lua/config/set.lua<CR>
 vim.keymap.set("n", "<Esc><Esc>", vim.cmd.nohlsearch)
 
 -- Tmux sessionizer
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Open files with vim in  ~/*
 vim.keymap.set("n", "<leader>f", "<cmd>silent !tmux neww vim-projects<CR>");
