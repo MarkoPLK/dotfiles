@@ -12,6 +12,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = true
+vim.opt.wrapscan = false
 
 vim.opt.history = 1000
 
@@ -24,7 +25,9 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+
 vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -32,7 +35,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = "80"
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('highlight_yank', {}),
