@@ -6,17 +6,13 @@ return {
         -- g:zenbones_compat = 1 In Vim, compat mode is turned on as Lush only
         -- works in Neovim.
         dependencies = "rktjmp/lush.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            -- vim.g.zenbones_darken_comments = 45
-            vim.cmd.colorscheme('zenwritten')
-        end,
+        lazy = true,
     },
 
     {
         "rebelot/kanagawa.nvim",
-        lazy = true,
+        lazy = false,
+        priority = 1000,
         opts = {
             compile = false,      -- enable compiling the colorscheme
             undercurl = true,     -- enable undercurls
@@ -66,6 +62,10 @@ return {
 
                     -- Cursor line --
                     CursorLine = { fg = "NONE", bg = theme.ui.bg_p1 },
+
+                    -- Visual --
+                    Visual = { bg = theme.ui.bg_p2 },
+
                 }
             end,
         },
