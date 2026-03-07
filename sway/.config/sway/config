@@ -1,5 +1,5 @@
 # Logo key. Mod1 = Alt, Mod4 = Win
-set $mod Mod1 
+set $mod Mod4 
 
 # Home row directions key
 set $left j
