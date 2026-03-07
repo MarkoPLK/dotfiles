@@ -9,7 +9,7 @@ set $down k
 
 font pango:JetBrainsNF mono 6
 
-set $term alacritty
+set $term alacritty -e tmux new-session -A -s blank
 set $menu dmenu
 
 ### Idle configuration
@@ -177,7 +177,7 @@ bindsym $mod+r mode "resize"
         # Power menu
         bindsym $mod+F4 exec --no-startup-id ~/.config/rofi/scripts/powermenu_t2
         # Tmux sessionizer with fzf
-        bindsym $mod+p exec alacritty --hold -e ~/.local/bin/tmux-sessionizer 
+        bindsym $mod+p exec alacritty  -e ~/.local/bin/tmux-sessionizer 
                 
 #
 # Status bar:

@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
-work_dirs=`find ~/personal ~/personal/CTF/ ~/personal/instrumentacion/ ~/personal/instrumentacion/clients/ ~/personal/hacking/ ~/personal/kernel/ ~/personal/programming/ -maxdepth 2 -mindepth 1 -type d``printf "\n$HOME/dotfiles"`
-class_dirs=`find ~/MUCC -maxdepth 4 -type d`
-notes_dir=$HOME/notas
-dev_dir=`find $HOME/dev -type d`
+personal=`find ~/personal -maxdepth 2 -mindepth 1 -type d`
+dev=`find $HOME/dev -maxdepth 1 -mindepth 1 -type d`
+notes=`find $HOME/neorg -maxdepth 1 -type d`
+bib=$HOME/biblioteca
+dotfiles=$HOME/dotfiles
 
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=`printf "$work_dirs\n$class_dirs\n$notes_dir\n$dev_dir" | fzf`
+    selected=`echo -e "$personal\n$notes\n$dev\n$bib\n$dotfiles" | fzf --tmux=bottom`
 fi
 
 if [[ -z $selected ]]; then
@@ -16,16 +17,8 @@ if [[ -z $selected ]]; then
 fi
 
 selected_name=`basename $selected | tr . _`
-tmux_running=`tmux ls`
 
-if [[ -z $tmux_running ]] ;then 
-    tmux new-session -s $selected_name -c $selected
-    exit 0
-fi
-
-if ! tmux has-session -t=$selected_name 2> /dev/null; then 
-    tmux new-session -ds $selected_name -c $selected
-fi
+tmux new-session -A -s $selected_name -d -c $selected
 
 if [[ -z $TMUX ]]; then
     tmux attach -t $selected_name
