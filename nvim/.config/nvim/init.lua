@@ -1,6 +1,4 @@
-require("config.remap")
-require("config.set")
-require("config.lazy")
+require("config")
 
 vim.lsp.enable("lua_ls")
 vim.lsp.enable('clangd')

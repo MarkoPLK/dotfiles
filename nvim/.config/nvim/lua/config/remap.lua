@@ -1,6 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = ","
-
 -- Explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -61,7 +58,7 @@ vim.keymap.set(
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/plugins/<CR>");
 vim.keymap.set("n", "<leader>vpr", "<cmd>e ~/.config/nvim/lua/config/remap.lua<CR>");
-vim.keymap.set("n", "<leader>vps", "<cmd>e ~/.config/nvim/lua/config/set.lua<CR>");
+vim.keymap.set("n", "<leader>vps", "<cmd>e ~/.config/nvim/lua/config/options.lua<CR>");
 
 -- Turn of highlighting
 vim.keymap.set("n", "<Esc><Esc>", vim.cmd.nohlsearch)
