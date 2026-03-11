@@ -1,5 +1,39 @@
 return {
     {
+        "casedami/neomodern.nvim",
+        priority = 1000,
+        lazy = false,
+        opts = {
+            -- 'default' default background
+            -- 'alt' darker background
+            -- 'transparent' background is not set
+            bg = "default",
+
+            theme = "hojicha", -- 'moon' | 'iceclimber' | 'gyokuro' | 'hojicha' | 'roseprime'
+
+            gutter = {
+                cursorline = false, -- highlight the cursorline in the gutter
+                dark = false, -- highlight gutter darker than the Normal bg
+            },
+
+            diagnostics = {
+                darker = true, -- use darker colors for diagnostics
+                undercurl = true, -- use undercurl for diagnostics
+                background = true, -- use a background color for diagnostics
+            },
+
+            -- override colors, see #Customization below
+            overrides = {
+                default = {},
+                hlgroups = {}
+            }        },
+        config = function(_, opts)
+            require("neomodern").setup(opts)
+            require("neomodern").load()
+        end,
+    },
+
+    {
         "zenbones-theme/zenbones.nvim",
         -- Optionally install Lush. Allows for more configuration or extending
         -- the colorscheme If you don't want to install lush, make sure to set
@@ -11,8 +45,7 @@ return {
 
     {
         "rebelot/kanagawa.nvim",
-        lazy = false,
-        priority = 1000,
+        lazy = true,
         opts = {
             compile = false,      -- enable compiling the colorscheme
             undercurl = true,     -- enable undercurls
@@ -75,6 +108,10 @@ return {
         end,
     },
 
+    {
+        "slugbyte/lackluster.nvim",
+        lazy = false,
+    },
 
     -- zazen vim color scheme (a personalized version of zenesque) (really good gray scale and background change for lit)
     {
@@ -107,12 +144,6 @@ return {
     },
 
     {
-        "jaredgorski/fogbell.vim",
-        lazy = true,
-    },
-
-    {
-        "jaredgorski/Mies.vim",
-        lazy = true,
+        "Lokaltog/vim-monotone"
     },
 }
