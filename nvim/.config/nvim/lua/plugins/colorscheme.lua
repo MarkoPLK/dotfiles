@@ -25,8 +25,9 @@ return {
             -- override colors, see #Customization below
             overrides = {
                 default = {},
-                hlgroups = {}
-            }        },
+                hlgroups = {} 
+            }
+        },
         config = function(_, opts)
             require("neomodern").setup(opts)
             require("neomodern").load()
@@ -45,7 +46,7 @@ return {
 
     {
         "rebelot/kanagawa.nvim",
-        lazy = true,
+        lazy = false,
         opts = {
             compile = false,      -- enable compiling the colorscheme
             undercurl = true,     -- enable undercurls
@@ -104,7 +105,7 @@ return {
         },
         config = function(_, opts)
             require("kanagawa").setup(opts)
-            vim.cmd([[colorscheme kanagawa-dragon]])
+            -- vim.cmd([[colorscheme kanagawa-dragon]])
         end,
     },
 
