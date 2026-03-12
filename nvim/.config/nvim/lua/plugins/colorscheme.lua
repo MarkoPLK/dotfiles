@@ -25,23 +25,13 @@ return {
             -- override colors, see #Customization below
             overrides = {
                 default = {},
-                hlgroups = {} 
+                hlgroups = {}
             }
         },
         config = function(_, opts)
             require("neomodern").setup(opts)
             require("neomodern").load()
         end,
-    },
-
-    {
-        "zenbones-theme/zenbones.nvim",
-        -- Optionally install Lush. Allows for more configuration or extending
-        -- the colorscheme If you don't want to install lush, make sure to set
-        -- g:zenbones_compat = 1 In Vim, compat mode is turned on as Lush only
-        -- works in Neovim.
-        dependencies = "rktjmp/lush.nvim",
-        lazy = true,
     },
 
     {
@@ -110,8 +100,66 @@ return {
     },
 
     {
-        "slugbyte/lackluster.nvim",
+        "ribru17/bamboo.nvim",
+        priority = 1000,
         lazy = false,
+        opts = {
+            style = 'vulgaris', -- Choose between 'vulgaris' (regular), 'multiplex' (greener), and 'light'
+            toggle_style_key = nil, -- Keybind to toggle theme style. Leave it nil to disable it, or set it to a string, e.g. "<leader>ts"
+            toggle_style_list = { 'vulgaris', 'multiplex', 'light' }, -- List of styles to toggle between
+            transparent = false, -- Show/hide background
+            dim_inactive = false, -- Dim inactive windows/buffers
+            term_colors = true, -- Change terminal color as per the selected theme style
+            ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
+            cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
+
+            -- Change code style ---
+            -- Options are anything that can be passed to the `vim.api.nvim_set_hl` table
+            -- You can also configure styles with a string, e.g. keywords = 'italic,bold'
+            code_style = {
+                comments = { italic = true },
+                conditionals = { italic = true },
+                keywords = {},
+                functions = {},
+                namespaces = { italic = true },
+                parameters = { italic = true },
+                strings = {},
+                variables = {},
+            },
+
+            -- Lualine options --
+            lualine = {
+                transparent = false, -- lualine center bar transparency
+            },
+
+            -- Custom Highlights --
+            colors = {}, -- Override default colors
+            highlights = {}, -- Override highlight groups
+
+            -- Plugins Config --
+            diagnostics = {
+                darker = false, -- darker colors for diagnostic
+                undercurl = true, -- use undercurl instead of underline for diagnostics
+                background = true, -- use background color for virtual text
+            },
+        },
+        config = function(_, opts)
+            require('bamboo').setup(opts)
+        end,
+    },
+
+    {
+        "aktersnurra/no-clown-fiesta.nvim",
+    },
+
+    {
+        "zenbones-theme/zenbones.nvim",
+        -- Optionally install Lush. Allows for more configuration or extending
+        -- the colorscheme If you don't want to install lush, make sure to set
+        -- g:zenbones_compat = 1 In Vim, compat mode is turned on as Lush only
+        -- works in Neovim.
+        dependencies = "rktjmp/lush.nvim",
+        lazy = true,
     },
 
     -- zazen vim color scheme (a personalized version of zenesque) (really good gray scale and background change for lit)
