@@ -1,10 +1,8 @@
 return {
     {
         "nvim-neorg/neorg",
-        build = ":Neorg sync-parsers",
         lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
         version = "*", -- Pin Neorg to the latest stable release
-        dependencies = { "nvim-lua/plenary.nvim" },
         ft = "norg", -- Lazy load on filetype
         config = function()
             require("neorg").setup({
@@ -26,7 +24,7 @@ return {
                     ["core.dirman"] = {
                         config = {
                             workspaces = {
-                                notes = "~/notas",
+                                notes = "~/neorg/notas",
                             },
                             default_workspace = "notes",
                         },
